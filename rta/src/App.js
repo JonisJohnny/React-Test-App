@@ -7,16 +7,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { observable, decorate } from "mobx"
+
 import TodoList from "./pages/todoList";
 import DoneList from "./pages/doneList";
-import tasksData from "./service/data";
-
-
 
 export default class App extends React.Component { 
-  todoList = tasksData;
-
   
   render () {
   return (
@@ -48,7 +43,4 @@ export default class App extends React.Component {
   }
 }
 
-decorate(App, {
-  todoList: observable
-})
 

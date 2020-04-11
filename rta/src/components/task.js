@@ -1,11 +1,14 @@
 import React from 'react';
 
-function Task() {
+function Task(props) {
     return (
         <div>
-            <input type="checkbox" />
-            <input type="text" placeholder="Todo" />
-            DueDate:<input type="date" />   
+            <form>
+                <input type="checkbox" />
+                <input type="text" value={props.name} placeholder="Add what todo..." />
+                DueDate:<input type="date" />
+                <input type="hidden" />
+            </form>
         </div>
     );
 }
