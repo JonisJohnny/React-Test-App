@@ -9,13 +9,13 @@ export default class taskService extends React.Component{
             "id":"1",
             "named":"Exercise",
             "done":false,
-            "dueDate":"02.05.2020"
+            "dueDate":"2020-02-05"
         },
         {
             "id":"2",
             "named":"Clean House",
             "done":true,
-            "dueDate":"07.05.2020"
+            "dueDate":"2020-07-05"
         }
     ]
     

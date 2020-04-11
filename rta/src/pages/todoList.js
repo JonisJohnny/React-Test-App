@@ -2,13 +2,16 @@ import React from 'react';
 import Task from '../components/task';
 
 import tasksService from "../service/taskService";
-let test = new tasksService();
-console.log(test);
+let tasksServiceClass = new tasksService();
 function Tasks (){
     return (
-        test.taskService.get.map(test => {
-           return <Task 
-                name = {test.name}
+        tasksServiceClass.get().map(t => {
+           return <Task key={t.id}
+                name = {t.named}
+                id = {t.id}
+                dueDate = {t.dueDate}
+                done = {t.done}
+                info = {t.id}
             />
         })
     )
@@ -19,6 +22,7 @@ function TodoList () {
         <div>
             Add new task:
             <Task />
+            <hr />
             <Tasks />
         </div>
     );
